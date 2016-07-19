@@ -1,0 +1,613 @@
+import java.io.*;
+public class ren
+{//class
+public static void main()throws IOException,InterruptedException
+{
+String s,un1,p1,cho;int po=0;int k=0;String ch1;String cho2;
+String p[]=new String[100];String un[]=new String[100];String cc;int c=3,c2=0,c1=0,opt;
+String name[]=new String[100];String mat[]=new String[10]; String email_id[]=new String[100];
+String sub[]=new String[100];String sent[]=new String[100];
+BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+System.out.println("Want to get connected with your friends!!\njust log on to getfriends.com");
+System.out.println(" Enter www.getfriends.com");
+s=br.readLine();
+if (s.equalsIgnoreCase("www.getfriends.com"))
+{//3bracket
+System.out.println("Welcome to getfriends.com");
+System.out.println("Do you want to \n 1.Sign up ");
+System.out.println(" 2.Sign in");
+int op=Integer.parseInt(br.readLine());
+switch(op)
+{
+case 1:
+do
+{
+System.out.println("Enter the details to create ur id");
+int j1=0;
+System.out.print("Name: ");
+name[j1]=br.readLine();
+System.out.print("City :");
+String city=br.readLine();
+System.out.print("Enter the Email Address: ");
+un[j1]=br.readLine();
+System.out.print("Enter Password : ");
+un[j1]=br.readLine();
+System.out.print("Enter age:");
+p[j1]=br.readLine();
+System.out.println("YOUR EMAIL ID IS CREATED SUCCESSFULLY!!!!");j1++;
+System.out.println("Do you want to create another account. Press 'YES'/'NO'??? ");
+cho2=br.readLine();
+}while(cho2.equalsIgnoreCase("yes"));
+case 2:
+System.out.print("Username: ");
+un1=br.readLine();
+System.out.print("Password: ");
+p1=br.readLine();
+int f=0;
+for(int i=0;i<un.length;i++)
+{
+if(un1.equalsIgnoreCase(un[i])&&p1.equalsIgnoreCase(p[i]))
+{
+f=1;
+break;
+}
+}
+if(f==1)
+{//else enter correct password
+for(int i=0;i<=100;i++)
+{
+System.out.print("\t\t\tLoading....");
+System.out.print(i+"%");
+Thread.sleep(100);
+System.out.print("\f");
+}
+do
+{
+System.out.println("----------------------------------WELCOME TO YOUR PAGE-------------------------------------------");
+Thread.sleep(400);
+System.out.println("1. Compose Mail ");
+Thread.sleep(400);
+System.out.println("2. Inbox("+c+")");
+Thread.sleep(400);
+System.out.println("3. Sent Mail("+c1+")");
+Thread.sleep(400);
+System.out.println("4. Drafts("+c2+")");
+Thread.sleep(400);
+System.out.println("5. Applications");
+System.out.println("--------------------------------------------------------------------------------------------------");
+System.out.println("ENTER YOUR OPTION!!!");
+opt=Integer.parseInt(br.readLine());
+if(opt==1)//compose mail
+{
+System.out.println("*********************************************************************************");
+System.out.print("Enter the Email Address : ");
+email_id[po]=br.readLine();
+System.out.print("Cc  :");
+cc=br.readLine();
+System.out.print("Subject  ");
+sub[po]=br.readLine();
+System.out.println("*********************************************************************************");
+System.out.println("Enter the text");
+mat[po]=br.readLine();
+System.out.println("*********************************************************************************");
+sent[k]=mat[po];po++;k++;
+System.out.println("                      PRESS '*' TO SEND                                  ");
+String ast=br.readLine();
+if(ast.equals("*"))
+{
+for(int i=0;i<=100;i++)
+{
+System.out.print("\t\t\tSending....");
+System.out.print(i+"%");
+Thread.sleep(100);
+System.out.print("\f");
+}
+System.out.println(" ____________                                         ____________");
+System.out.println("|\\          /|         sent successfully             |\\         /|");
+System.out.println("| \\________/ |  ---------------------------------->  | \\_______/ |");
+System.out.println("|            |                                       |           |");
+System.out.println("|____________|                                       |___________|");
+c1++;
+}
+}//end of compose mail
+else if(opt==2)
+{
+do
+{
+String l="getfriends.com";
+System.out.println("===============================**INBOX**=============================================");
+Thread.sleep(200);
+System.out.println(" 1. Thanks for creating..........");
+Thread.sleep(200);
+System.out.println("  2. Our Website provides......");
+Thread.sleep(200);
+System.out.println("   3. Join your group of..........");
+Thread.sleep(200);
+System.out.println("CHOOSE THE MESSAGE TO DISPLAY");
+int in=Integer.parseInt(br.readLine());
+if(in==1)
+{
+System.out.println("From : "+l);
+System.out.println("Thanks for creating Email ID in our website,\n You can have a lot of fun with your friends\n and we offer you with innumerable facilities ");
+System.out.println("                 CHECK OUT!!!!!!\n      ENJOY:-)");
+System.out.println("PRESS 'R'  TO  REPLY");
+String rep=br.readLine();
+if(rep.equalsIgnoreCase("r"))
+{
+System.out.print("Subject  ");
+sub[po]=br.readLine();
+System.out.println("*********************************************************************************");
+System.out.println("Enter the text");
+mat[po]=br.readLine();
+System.out.println("*********************************************************************************");
+sent[k]=mat[po];po++;k++;
+for(int i=0;i<=100;i++)
+{
+System.out.print("\t\t\t\t\tSending....");
+System.out.print(i+"%");
+Thread.sleep(100);
+System.out.print("\f");
+}System.out.println(" ____________                                         ____________");
+System.out.println("|\\          /|         sent successfully             |\\         /|");
+System.out.println("| \\________/ |  ---------------------------------->  | \\_______/ |");
+System.out.println("|            |                                       |           |");
+System.out.println("|____________|                                       |___________|");
+c1++;
+}
+}
+else if(in==2)
+{
+System.out.println(" From : "+l);
+System.out.println("Our Website provides you with a lot facilities like Chatting,Pay your bills,/n Games and a lot more fun.");
+System.out.println("Just click on appplications to get the above options .");
+
+System.out.println("PRESS 'R'  TO  REPLY");
+String rep=br.readLine();
+if(rep.equalsIgnoreCase("r"))
+{
+System.out.print("Subject  ");
+sub[po]=br.readLine();
+System.out.println("*********************************************************************************");
+System.out.println("Enter the text");
+mat[po]=br.readLine();
+System.out.println("*********************************************************************************");
+sent[k]=mat[po];po++;k++;
+for(int i=0;i<=100;i++)
+{
+System.out.print("\t\t\t\t\tSending....");
+System.out.print(i+"%");
+Thread.sleep(100);
+System.out.print("\f");
+}
+System.out.println(" ____________                                         ____________");
+System.out.println("|\\          /|         sent successfully             |\\         /|");
+System.out.println("| \\________/ |  ---------------------------------->  | \\_______/ |");
+System.out.println("|            |                                       |           |");
+System.out.println("|____________|                                       |___________|");
+c1++;
+}
+}
+else if(in==3)
+{
+System.out.println(" From : "+l);
+System.out.println("Join your group of friends and share your thoughts!!!!!!!!!!!! ");
+System.out.println("To Chat--->Applications---->Chat ");
+System.out.println("PRESS 'R'  TO  REPLY");
+String rep=br.readLine();
+if(rep.equalsIgnoreCase("r"))
+{
+System.out.print("Subject  ");
+sub[po]=br.readLine();
+System.out.println("*********************************************************************************");
+System.out.println("Enter the text");
+mat[po]=br.readLine();
+System.out.println("*********************************************************************************");
+sent[k]=mat[po];po++;k++;
+for(int i=0;i<=100;i++)
+{
+System.out.print("\t\t\t\tSending....");
+System.out.print(i+"%");
+Thread.sleep(100);
+System.out.print("\f");
+}
+System.out.println(" ____________                                         ____________");
+System.out.println("|\\          /|         sent successfully             |\\         /|");
+System.out.println("| \\________/ |  ---------------------------------->  | \\_______/ |");
+System.out.println("|            |                                       |           |");
+System.out.println("|____________|                                       |___________|");
+c1++;
+}
+}
+//inbox
+System.out.println("Wanna go back <-----Back. Press back");
+ch1=br.readLine();
+}while(ch1.equalsIgnoreCase("back"));
+}
+else if(opt==3)
+{
+System.out.println("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ SENT MAIL @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+
+int ia;
+for(ia=0;ia<c1;ia++)
+{
+System.out.println((ia+1)+". "+sub[ia]);
+}
+System.out.println("CHOOSE THE MESSAGE TO DISPLAY");
+int sent1=Integer.parseInt(br.readLine());
+System.out.println(sent[ia-1]);
+}
+else if(opt==4)
+{
+System.out.println(" Your  Drafts is Empty .");
+}
+else if(opt==5)
+{
+System.out.println("*******************************\\APPLICATIONS//*********************************");
+Thread.sleep(1000);
+System.out.println(" 1. Chat ");
+Thread.sleep(1000);
+System.out.println("  2. Games ");
+Thread.sleep(1000);
+System.out.println("   3. Pay your bills");
+Thread.sleep(1000);
+System.out.println("    4. Book your Movie Tickets ");
+Thread.sleep(1000);
+System.out.println("     5. Name Analyzzer ");
+System.out.println(" CHOOSE YOUR OPTION ??? ");
+int app=Integer.parseInt(br.readLine());
+if(app==1)
+{
+String b="WELCOME TO CHAT ROOM";
+for(int i=0;i<b.length();i++)
+{
+Thread.sleep(100);
+System.out.print(b.charAt(i));
+}
+System.out.println();
+System.out.println(" Get connected with your friends & share your actions , deeds, thoughts ");
+System.out.println("Enter your friends email address :");
+String ad1=br.readLine();
+for(int i=10;i>=0;i--)
+{
+System.out.print("Connecting in....");
+System.out.print(i+"seconds");
+Thread.sleep(300);
+System.out.print("\f");
+}
+System.out.println(" Sorry\n Your friend is not online!!!!!!!!!! ");
+}//app===1
+else if(app==2)
+{
+int a,b,d,e,f1,g,h,i1,j,k1,l,m;
+String kl="GAMES";
+for(int pr=0;pr<kl.length();pr++)
+System.out.print(kl.charAt(pr));
+System.out.println("RULES");
+System.out.println("There are  21 matchsticks ");
+System.out.println("Do not get left with 1 matchstick");
+System.out.println("Pick1,2,3or 4 matchsticks");
+{
+String sa=br.readLine();
+a=Integer.parseInt(sa);
+System.out.println("u hav picked up "+a+ "matchsticks");
+b=5-a;
+System.out.println("i picked"+b+"matchsticks");
+m=21-(a+b);
+System.out.println("maychsticks left are :"+m);
+System.out.println("Pick1,2,3or 4 matchsticks");
+}
+{
+String sb=br.readLine();
+ d=Integer.parseInt(sb);
+System.out.println("u hav picked up "+d+ "matchsticks");
+e=5-d;
+System.out.println("i picked"+e+"matchsticks");
+f1=m-(d+e);
+System.out.println("maychsticks left are :"+f1);
+System.out.println("Pick1,2,3or 4 matchsticks");
+}
+{
+String sc=br.readLine();
+g=Integer.parseInt(sc);
+System.out.println("u hav picked up "+g+ "matchsticks");
+h=5-g;
+System.out.println("i picked"+h+"matchsticks");
+i1=f1-(g+h);
+System.out.println("maychsti1cks left are :"+i1);
+System.out.println("Pick1,2,3or 4 matchsticks");
+}
+{
+String sd=br.readLine();
+j=Integer.parseInt(sd);
+System.out.println("u hav picked up "+j+ "matchsticks");
+k1=5-j;
+System.out.println("i picked"+k1+"matchsticks");
+l=i1-(j+k1);
+System.out.println(" U r left with Matchsticks left are :"+l);
+}
+if(a<4)
+System.out.println("Lost");
+else if(d>4)
+System.out.println("Lost");
+else if(g>4)
+System.out.println("Lost");
+else if(j>4)
+System.out.println("Lost");
+}
+else if(app==3)
+{
+System.out.println("1. Electricity Bill");
+System.out.println(" 2. Telephone Bill");
+System.out.println("  3. Water Bill");
+System.out.println("CHOOSE YOUR OPTION");
+int ctw=Integer.parseInt(br.readLine());
+if(ctw==1)
+{
+String we="WELCOME TO KARNATAKA ELECTRICITY BOARD";
+for(int i=0;i<we.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we.charAt(i));
+}
+System.out.println();
+System.out.print("Enter the Meter No: ");System.out.println();
+int metr=Integer.parseInt(br.readLine());
+System.out.println("Enter the amount in the bill :");
+double bill=Double.parseDouble(br.readLine());
+System.out.println("Enter the Accont no with Bank name :");
+double acc=Double.parseDouble(br.readLine());
+System.out.println("Enter the amount you are paying :");
+double amt=Double.parseDouble(br.readLine());
+String we1="PAID";
+for(int i=0;i<we1.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we1.charAt(i));
+}System.out.println();
+System.out.println(" Balance : Rs"+(amt-bill));
+}
+if(ctw==2)
+{
+String we="RENU SANCHAR NIGAM LIMITED";
+for(int i=0;i<we.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we.charAt(i));
+}
+System.out.println();
+System.out.print(" Enter your telephone number : ");
+long tel=Long.parseLong(br.readLine()); 
+System.out.println("Enter the amount in the bill :");
+double bill=Double.parseDouble(br.readLine());
+System.out.println("Enter the Accont no with Bank name :");
+double acc=Double.parseDouble(br.readLine());
+System.out.println("Enter the amount you are paying :");
+double amt=Double.parseDouble(br.readLine());
+String we1="PAID";
+for(int i=0;i<we1.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we1.charAt(i));
+}
+System.out.print(" Balance : Rs"+(amt-bill));
+}
+if(ctw==3)
+{
+String we="WATER SUPPLY ";
+for(int i=0;i<we.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we.charAt(i));
+}
+System.out.println();
+System.out.println("Enter the Meter No: ");
+int metr=Integer.parseInt(br.readLine());
+System.out.println("Enter the amount in the bill :");
+double bill=Double.parseDouble(br.readLine());
+System.out.println("Enter the Accont no with Bank name :");
+double acc=Double.parseDouble(br.readLine());
+System.out.println("Enter the amount you are paying :");
+double amt=Double.parseDouble(br.readLine());
+String we1="PAID";
+for(int i=0;i<we1.length();i++)
+{
+Thread.sleep(200);
+System.out.print(we1.charAt(i));
+}
+System.out.println();
+System.out.println(" Balance : Rs"+(amt-bill));
+}
+}//ap==3
+else if(app==4)
+{
+System.out.println("New Movie Funda's of the MONTH!!!!!!!!!!!!");
+System.out.println(".  TAMIL MOVIES               KANNADA MOVIES          ");
+System.out.println("      ARAMBAM                     LUCIA                ");
+System.out.println("      SINGAM 2                    SWEETY               ");
+System.out.println("      RAJA RANI                   VISHNUVARDHANA       ");
+System.out.println("      VISHVAROOBAM 2              SAGAAR               ");
+System.out.println("      ERANDAM ULAGAM                                   ");
+System.out.println("      VARTHA PADADHA                                   ");
+System.out.println("      VALLIBA SANGAM                                   "); 
+
+System.out.println("                                                        ");
+System.out.println("HINDI MOVIES                TELUGU MOVIES              ")   ;
+System.out.println("  KRISH  3                     GREEKU VEERRUDU                     ");
+System.out.println("  DHOOM  3                      BHAI                               ");
+System.out.println("  CHENNAI EXPRESS               ATHARINTIKI DAREDI          "); 
+System.out.println("  HEY JAWANI YEH DIWANI         BAADSHAH                     ");
+System.out.println("  BESHARAM                      RAMAIYYA VASTHAIVAYA         ");
+System.out.println("  DABANNG 3                     LIFE IS BEAUTIFUL                                   ");
+System.out.println("                                                                                               ");                       
+System.out.println("ENTER THE MOVIE NAME???????");
+String movie=br.readLine(); 
+System.out.print("ENTER THE NUMBER OF TICKETS: ");
+int tick=Integer.parseInt(br.readLine());
+System.out.println();
+System.out.println("Amount paid : Rs"+(tick*350));
+String pkl="TICKETS BOOKED!!!!!!!!!!!";
+for(int uj=0;uj<pkl.length();uj++)
+{
+Thread.sleep(200);
+System.out.print(pkl.charAt(uj));
+}
+System.out.println();
+System.out.println(" VISIT  AGAIN :-)  ");
+}
+else if(app==5)
+{
+System.out.println("ENTER YOUR NAME ?");
+String Name=br.readLine();
+
+Name=Name.toUpperCase();
+for(int i=0;i<Name.length();i++)
+{
+for(int d=0;d<=i;d++)
+System.out.print("  ");
+char ch=Name.charAt(i);
+if(ch=='A')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Adorable");
+}
+else if(ch=='B')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Brave");
+}
+else if(ch=='C')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Clever");
+}
+else if(ch=='D')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Diligent");
+}
+else if(ch=='E')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Emotional");
+}
+else if(ch=='F')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Funny");
+}
+else if(ch=='G')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Gorgeous");
+}
+else if(ch=='H')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Handsome");
+}
+else if(ch=='I')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Intelligent");
+}
+else if(ch=='J')
+{Thread.sleep(400);
+System.out.println(ch+"   Jovial");
+}
+else if(ch=='K')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Keen");
+}
+else if(ch=='L')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Lovable");
+}
+else if(ch=='M')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Magnificient");
+}
+else if(ch=='N')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Naughty");
+}
+else if(ch=='O')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Obedient");
+}
+else if(ch=='P')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Pretty");
+}
+else if(ch=='Q')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Qualitative");
+}
+else if(ch=='R')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Rational");
+}
+else if(ch=='S')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Sweet");
+}
+else if(ch=='T')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Truimphant");
+}
+else if(ch=='U')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Useful");
+}
+else if(ch=='V')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Vibrant");
+}
+else if(ch=='W')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Wise");
+}
+else if(ch=='X')
+{
+Thread.sleep(400);
+System.out.println(ch+"   XtraOrdinary");
+}
+else if(ch=='Y')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Youthful");
+}
+else if(ch=='Z')
+{
+Thread.sleep(400);
+System.out.println(ch+"   Zealous");
+}
+}
+}
+}
+System.out.println("Do you want to continue????. Press YES //NO!!");
+cho=br.readLine();
+}while(cho.equalsIgnoreCase("yes"));
+}
+else
+{
+System.out.println("ENTER CORRECT EMAIL ADDRESS OR PASSWORD!!!!!");
+}
+}
+}
+else
+System.out.println("SORRY!!ENTER CORRECT WEB ADDRESS !!!!!");
+}
+}
